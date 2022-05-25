@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>  
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+	<title>Python-Django MySQL CURD</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">  
+  </head>
+  <style>
+  label { width:150px; }
+  </style>
+  <body>  
+ <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container">
+   <div class="container-fluid">  
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+	 <li class="nav-item">
+         <a href="https://github.com/kabirul" target="_blank">
+<img src="https://amicacs.com/assets/images/logo.png" alt="" style="width:45px; height:45px; border-radius:50%; background-color:#FFFFFF; padding:2px; margin-left:10px;" /> 
+		</a> 	
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/blogs/">BLOG LISTS</a>
+      </li>	
+	  <li class="nav-item active">
+        <a class="nav-link" href="/blogs/add">ADD BLOG</a>
+      </li>	      
+      </ul>   
+     </div>
+    </div>
+   </div>
+</nav>
+
+<div class="container">
+  <div class="container-fluid">    
+  <div class="row" style="margin:50px 0;">
+    <div class="col-md-12">
+	<div class="card">  
+     <div class="card-body">
+      <h5 class="card-title">Delete Blog</h5>
+     <form action="" method="POST">
+        {% csrf_token %}
+
+        <br><br>
+        <div class="alert alert-danger" role="alert">
+            Are you sure you want to delete "{{ blogs.emp_name }}"?
+        </div>
+
+        <p>
+             <a href="/blogs/">Return</a>    
+        </p>
+
+        <p>
+            <input class="btn btn-danger" type="submit" value="Confirm">
+        </p>
+    </form>
+      </div>
+     </div>   
+	</div>	
+   </div>
+   
+   <div class="row">
+    <div class="col-md-12" style="text-align:center;">
+	   <p>Python-Django MySQL CURD tutorial <a href="https://github.com/kabirul" target="_blank" rel="noopener noreferrer">amica.</a></p>
+	</div>	
+   </div>	
+  </div>
+   </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
